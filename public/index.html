@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/titanic.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js" type="text/javascript">
+
+    </script>
+
+    <title>Titanic</title>
+</head>
+<body class="text-center">
+
+  <header>
+    <h1><i>Titanic: Story of the passengers.</i></h1>
+  </header>
+
+  <!-- Buttons -->
+  <section class="container-fluid" id="button-row">
+    <div class="row">
+      <button class="btn btn-success" type="button" id="btn-surv-total" onclick="plotPassengers(891, 10, 'fa-users fa-lg')">Total passengers survival</button>
+      <button class="btn btn-success" type="button" id="btn-surv-sex" action="surv_total.js">Survival by passenger's sex</button>
+      <button class="btn btn-success" type="button" id="btn-surv-class" action="surv_total.js">Survival by passenger's class</button>
+    </div>
+  </section>
+
+  <!-- Infographic -->
+  <section class="container-fluid" id="infographic">
+    <div class="row">
+      <div class="col-md-12" id="infographic-canvas">
+
+      </div>
+    </div>
+  </section>
+</body>
+</html>
