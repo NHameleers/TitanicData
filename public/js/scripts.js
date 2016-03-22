@@ -13,6 +13,10 @@ var firstClass = 216;
 var secondClass = 184;
 var thirdClass = 491;
 
+var tableColumns = 10;
+
+var passengersIcon = 'fa-users fa-lg'
+
 // Try according to this: http://www.w3schools.com/jsref/met_table_createthead.asp
 function plotPassengers(passengers, columns, faClass) {
   // Create a html table element.
@@ -53,6 +57,12 @@ function plotPassengers(passengers, columns, faClass) {
   $("table").css("margin", "0px auto");
 }
 
+var btnSurvTotal = document.getElementById("btn-surv-total");
+var tableHeader = document.createElement("H2");
+var tableHeaderContent = document.createTextNode("Passengers survived: x (y%)");
+tableHeader.appendChild(tableHeaderContent);
+btnSurvTotal.addEventListener("click", function(){document.getElementById("infographic-canvas").insertBefore(tableHeader, document.getElementById("infographic-canvas").childNodes[0])});
+btnSurvTotal.addEventListener("click", function() {plotPassengers(passengers, tableColumns, passengersIcon)});
 
 /*
 function plotPassengers() {
