@@ -17,7 +17,7 @@ var tableColumns = 10;
 
 var passengersIcon = 'fa-users fa-lg'
 
-// Try according to this: http://www.w3schools.com/jsref/met_table_createthead.asp
+// source of table function example: http://www.aspsnippets.com/Articles/Create-dynamic-Table-in-HTML-at-runtime-using-JavaScript.aspx
 function plotPassengers(passengers, columns, faClass) {
   // Create a html table element.
   var table = document.createElement("TABLE");
@@ -58,29 +58,4 @@ function plotPassengers(passengers, columns, faClass) {
 }
 
 var btnSurvTotal = document.getElementById("btn-surv-total");
-var tableHeader = document.createElement("H2");
-var tableHeaderContent = document.createTextNode("Passengers survived: x (y%)");
-tableHeader.appendChild(tableHeaderContent);
-btnSurvTotal.addEventListener("click", function(){document.getElementById("infographic-canvas").insertBefore(tableHeader, document.getElementById("infographic-canvas").childNodes[0])});
 btnSurvTotal.addEventListener("click", function() {plotPassengers(passengers, tableColumns, passengersIcon)});
-
-/*
-function plotPassengers() {
-  $("#infographic-canvas").empty();
-  $("#infographic-canvas").html("<table>");
-  for (var i = 0; i < 9; i++) {
-    $("#infographic-canvas").html("<tr class='passenger-row'></tr>");
-    if (i < 8) {
-      for (var j = 0; j < 10; j++) {
-        $(".passenger-row").html("<td class='passenger-icon'><i class='fa fa-users'></i></td>");
-      }
-    }
-    else {
-      for (var j = 0; j < 9; j++) {
-        $(".passenger-row").html("<td class='passenger-icon'><i class='fa fa-users'></i></td>");
-      }
-    }
-  }
-  $("#infographic-canvas").html("<table>");
-}
-*/
