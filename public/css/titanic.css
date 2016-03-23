@@ -11,3 +11,11 @@ button {
 #infographic-canvas {
   margin-top: 10px;
 }
+
+.color-survived {
+  color: green;
+}
+
+.color-perished {
+  color: red;
+}
