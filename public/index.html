@@ -15,23 +15,28 @@
 </head>
 <body class="text-center">
 
-  <header>
+  <header id="page-header">
     <h1><i>Titanic: Story of the passengers.</i></h1>
   </header>
 
   <!-- Buttons -->
   <section class="container-fluid" id="button-row">
     <div class="row">
-      <button class="btn btn-success" type="button" id="btn-surv-total">Total passengers survival</button>
-      <button class="btn btn-success" type="button" id="btn-surv-sex" action="surv_total.js">Survival by passenger's sex</button>
-      <button class="btn btn-success" type="button" id="btn-surv-class" action="surv_total.js">Survival by passenger's class</button>
+      <button class="btn btn-success" type="button" id="btn-surv-total">Total passengers</button>
+      <button class="btn btn-success" type="button" id="btn-surv-sex" action="surv_total.js">Men and women</button>
+      <button class="btn btn-success" type="button" id="btn-surv-class" action="surv_total.js">Passengers by class</button>
+      <br>
+      <button class="btn btn-success" type="button" id="btn-survived">How many survived?</button>
     </div>
   </section>
 
   <!-- Infographic -->
   <section class="container-fluid" id="infographic">
     <div class="row">
-      <div class="col-md-12" id="infographic-canvas">
+      <header class="col-md-12">
+        <h1 id="table-header"></h1>
+      </header>
+      <div class="col-md-8" id="infographic-canvas">
 
       </div>
     </div>

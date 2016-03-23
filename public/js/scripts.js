@@ -15,7 +15,9 @@ var thirdClass = 491;
 
 var tableColumns = 10;
 
-var passengersIcon = 'fa-users fa-lg'
+var passengersIcon = 'fa-users fa-lg';
+var menIcon = 'fa-male fa-lg';
+var womenIcon = 'fa-female fa-lg';
 
 // source of table function example: http://www.aspsnippets.com/Articles/Create-dynamic-Table-in-HTML-at-runtime-using-JavaScript.aspx
 function plotPassengers(passengers, columns, faClass) {
@@ -57,5 +59,7 @@ function plotPassengers(passengers, columns, faClass) {
   $("table").css("margin", "0px auto");
 }
 
+// add actions to total passengers button
 var btnSurvTotal = document.getElementById("btn-surv-total");
+btnSurvTotal.addEventListener("click", function() {$("#table-header").html("Total Passengers: 891")});
 btnSurvTotal.addEventListener("click", function() {plotPassengers(passengers, tableColumns, passengersIcon)});
