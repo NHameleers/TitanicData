@@ -67,8 +67,10 @@ function plotPassengers(passengers, columns, faClass, targetElement) {
 
 // add actions to total passengers button
 var btnSurvTotal = document.getElementById("btn-surv-total");
-btnSurvTotal.addEventListener("click", function() {$("#infographic").html("<h1>Passengers</h1> \
+btnSurvTotal.addEventListener("click", function() {$("#infographic").html(" \
       <div class='col-md-12'> \
+        <h1>Passengers</h1> \
+        <h2 id='stats-passengers'>Total: 891</h2> \
         <div id='infographic-canvas'> \
         </div> \
       </div>")});
@@ -78,14 +80,14 @@ btnSurvTotal.addEventListener("click", function() {plotPassengers(passengers, ta
 var btnSurvSex = document.getElementById("btn-surv-sex");
 btnSurvSex.addEventListener("click", function() {$("#infographic").html("<div class='col-md-6'> \
         <h1>Men</h1> \
-        <h2>19% survived: 109 out of 577</h2> \
+        <h2 id='stats-men'>Total: 577</h2> \
         <div id='infographic-canvas-men'> \
           <!-- place to plot the table --> \
         </div> \
       </div> \
       <div class='col-md-6'> \
         <h1>Women</h1> \
-        <h2>74% survived: 233 out of 314</h2> \
+        <h2 id='stats-women'>Total: 314</h2> \
         <div id='infographic-canvas-women'> \
           <!-- place to plot the table --> \
         </div> \
@@ -98,21 +100,21 @@ var btnSurvClass = document.getElementById("btn-surv-class");
 btnSurvClass.addEventListener("click", function() {$("#infographic").html(" \
       <div class='col-md-4'> \
         <h1>1st Class</h1> \
-        <h2>63% survived: 136 out of 216</h2> \
+        <h2 id='stats-first'>Total 216</h2> \
         <div id='infographic-canvas-first'> \
           <!-- place to plot the table --> \
         </div> \
       </div> \
       <div class='col-md-4'> \
         <h1>2nd Class</h1> \
-        <h2>47% survived: 87 out of 184</h2> \
+        <h2 id='stats-second'>Total 184</h2> \
         <div id='infographic-canvas-second'> \
           <!-- place to plot the table --> \
         </div> \
       </div> \
       <div class='col-md-4'> \
         <h1>3rd Class</h1> \
-        <h2>24% survived: 119 out of 491</h2> \
+        <h2 id='stats-third'>Total 491</h2> \
         <div id='infographic-canvas-third'> \
           <!-- place to plot the table --> \
         </div> \
@@ -120,3 +122,22 @@ btnSurvClass.addEventListener("click", function() {$("#infographic").html(" \
 btnSurvClass.addEventListener("click", function() {plotPassengers(firstClass, 10, passengersIcon, 'infographic-canvas-first')});
 btnSurvClass.addEventListener("click", function() {plotPassengers(secondClass, 10, passengersIcon, 'infographic-canvas-second')});
 btnSurvClass.addEventListener("click", function() {plotPassengers(thirdClass, 10, passengersIcon, 'infographic-canvas-third')});
+
+// add actions to 'How many survived' button
+function survStats() {
+  if (document.getElementById("stats-passengers")) {
+    $("#stats-passengers").html("38% survived: 342 out of 891");
+  }
+  else if (document.getElementById("stats-men")) {
+    $("#stats-men").html("19% survived: 109 out of 577");
+    $("#stats-women").html("74% survived: 233 out of 314");
+  }
+  else if (document.getElementById("stats-first")) {
+    $("#stats-first").html("63% survived: 136 out of 216");
+    $("#stats-second").html("47% survived: 87 out of 184");
+    $("#stats-third").html("24% survived: 119 out of 491");
+  }
+}
+
+var btnHowManySurv = document.getElementById("btn-how-many-surv");
+btnHowManySurv.addEventListener("click", function() {survStats()});
