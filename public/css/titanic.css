@@ -16,6 +16,11 @@ button {
   width: 170px;
 }
 
+#button-how-many-surv {
+  margin: 10px auto;
+  width: 350px;
+}
+
 #infographic-canvas {
   margin-top: 10px;
 }

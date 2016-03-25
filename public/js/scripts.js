@@ -15,11 +15,17 @@
 $(function(){ // run when document ready
 
   var passengers = 891;
+  var survivorsPassengers = 342;
   var men = 577;
+  var survivorsMen = 109;
   var women = 314;
+  var survivorsWomen = 233;
   var firstClass = 216;
+  var survivorsFirstClass = 136;
   var secondClass = 184;
+  var survivorsSecondClass = 87;
   var thirdClass = 491;
+  var survivorsThirdClass = 119;
 
   var tableColumns = 10;
 
@@ -144,15 +150,54 @@ $(function(){ // run when document ready
 
   // add actions to 'How many survived' button
   function survStats() {
-    $("#stats-passengers").html("38% survived: 342 out of 891");
-    $("#stats-men").html("19% survived: 109 out of 577");
-    $("#stats-women").html("74% survived: 233 out of 314");
-    $("#stats-first").html("63% survived: 136 out of 216");
-    $("#stats-second").html("47% survived: 87 out of 184");
-    $("#stats-third").html("24% survived: 119 out of 491");
+    $("#stats-passengers").html("38% survived: 342 out of 891").hide().fadeIn(2000);
+    $("#stats-men").html("19% survived: 109 out of 577").hide().fadeIn(2000);
+    $("#stats-women").html("74% survived: 233 out of 314").hide().fadeIn(2000);
+    $("#stats-first").html("63% survived: 136 out of 216").hide().fadeIn(2000);
+    $("#stats-second").html("47% survived: 87 out of 184").hide().fadeIn(2000);
+    $("#stats-third").html("24% survived: 119 out of 491").hide().fadeIn(2000);
   } // end function survStats
 
   var btnHowManySurv = $("#btn-how-many-surv");
   btnHowManySurv.click(function() {survStats()});
 
+  // coloring the tables according to proportion that survived
+  btnHowManySurv.click(function(){
+    $("#infographic-canvas td").each(function(i){
+      if (i > Math.round(survivorsPassengers/10)) {
+        this.style.transition = "color 2s ease";
+        this.style.color = "black";
+      }
+    });
+    $("#infographic-canvas-men td").each(function(i){
+      if (i > Math.round(survivorsMen/10)) {
+        this.style.transition = "color 2s ease";
+        this.style.color = "black";
+      }
+    });
+    $("#infographic-canvas-women td").each(function(i){
+      if (i > Math.round(survivorsWomen/10)) {
+        this.style.transition = "color 2s ease";
+        this.style.color = "black";
+      }
+    });
+    $("#infographic-canvas-first td").each(function(i){
+      if (i > Math.round(survivorsFirstClass/10)) {
+        this.style.transition = "color 2s ease";
+        this.style.color = "black";
+      }
+    });
+    $("#infographic-canvas-second td").each(function(i){
+      if (i > Math.round(survivorsSecondClass/10)) {
+        this.style.transition = "color 2s ease";
+        this.style.color = "black";
+      }
+    });
+    $("#infographic-canvas-third td").each(function(i){
+      if (i > Math.round(survivorsThirdClass/10)) {
+        this.style.transition = "color 2s ease";
+        this.style.color = "black";
+      }
+    });
+  }); // end of table coloring according to survivors
 }); // end ready
