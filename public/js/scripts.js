@@ -23,7 +23,7 @@ $(function(){ // run when document ready
 
   var tableColumns = 10;
 
-  var passengersIcon = 'fa-users fa-lg';
+  var passengersIcon = 'fa-user fa-lg';
   var menIcon = 'fa-male fa-lg';
   var womenIcon = 'fa-female fa-lg';
 
@@ -69,61 +69,78 @@ $(function(){ // run when document ready
 
   // add actions to total passengers button
   var btnSurvTotal = $("#btn-surv-total");
-  btnSurvTotal.click(function() {$("#infographic").html(" \
-        <div class='col-md-12'> \
-          <h1>Passengers</h1> \
-          <h2 id='stats-passengers'>Total: 891</h2> \
-          <div id='infographic-canvas'> \
+  var survTotalContent = " \
+        <div class='col-md-12 info-box'> \
+          <div class='info-box-content'> \
+            <h1>Passengers</h1> \
+            <h2 id='stats-passengers'>Total: 891</h2> \
+            <div id='infographic-canvas'> \
+            </div> \
           </div> \
-        </div>")});
+        </div>";
+  btnSurvTotal.click(function() {$("#infographic").html(survTotalContent)});
   btnSurvTotal.click(function() {plotPassengers(passengers, tableColumns, passengersIcon, 'infographic-canvas')});
 
   // add actions to men/women button
   var btnSurvSex = $("#btn-surv-sex");
-  btnSurvSex.click(function() {$("#infographic").html("<div class='col-md-6'> \
-          <h1>Men</h1> \
-          <h2 id='stats-men'>Total: 577</h2> \
-          <div id='infographic-canvas-men'> \
-            <!-- place to plot the table --> \
+  var survSexContent = " \
+        <div class='col-md-6 info-box'> \
+          <div class='info-box-content'> \
+            <h1>Men</h1> \
+            <h2 id='stats-men'>Total: 577</h2> \
+            <div id='infographic-canvas-men'> \
+              <!-- place to plot the table --> \
+            </div> \
           </div> \
         </div> \
-        <div class='col-md-6'> \
-          <h1>Women</h1> \
-          <h2 id='stats-women'>Total: 314</h2> \
-          <div id='infographic-canvas-women'> \
-            <!-- place to plot the table --> \
+        <div class='col-md-6 info-box'> \
+          <div class='info-box-content'> \
+            <h1>Women</h1> \
+            <h2 id='stats-women'>Total: 314</h2> \
+            <div id='infographic-canvas-women'> \
+              <!-- place to plot the table --> \
+            </div> \
           </div> \
-        </div> <!-- /.col-md-6 -->")});
+        </div> <!-- /.col-md-6 -->";
+  btnSurvSex.click(function() {$("#infographic").html(survSexContent)});
   btnSurvSex.click(function() {plotPassengers(men, 10, menIcon, 'infographic-canvas-men')});
   btnSurvSex.click(function() {plotPassengers(women, 10, womenIcon, 'infographic-canvas-women')});
 
   // add actions to class button
   var btnSurvClass = $("#btn-surv-class");
-  btnSurvClass.click(function() {$("#infographic").html(" \
-        <div class='col-md-4'> \
-          <h1>1st Class</h1> \
-          <h2 id='stats-first'>Total 216</h2> \
-          <div id='infographic-canvas-first'> \
-            <!-- place to plot the table --> \
+  var survClassContent = " \
+        <div class='col-md-4 info-box'> \
+          <div class='info-box-content'<> \
+            <h1>1st Class</h1> \
+            <h2 id='stats-first'>Total 216</h2> \
+            <div id='infographic-canvas-first'> \
+              <!-- place to plot the table --> \
+            </div> \
           </div> \
         </div> \
-        <div class='col-md-4'> \
-          <h1>2nd Class</h1> \
-          <h2 id='stats-second'>Total 184</h2> \
-          <div id='infographic-canvas-second'> \
-            <!-- place to plot the table --> \
+        <div class='col-md-4 info-box'> \
+          <div class='info-box-content'> \
+            <h1>2nd Class</h1> \
+            <h2 id='stats-second'>Total 184</h2> \
+            <div id='infographic-canvas-second'> \
+              <!-- place to plot the table --> \
+            </div> \
           </div> \
         </div> \
-        <div class='col-md-4'> \
-          <h1>3rd Class</h1> \
-          <h2 id='stats-third'>Total 491</h2> \
-          <div id='infographic-canvas-third'> \
-            <!-- place to plot the table --> \
+        <div class='col-md-4 info-box'> \
+          <div class='info-box-content'> \
+            <h1>3rd Class</h1> \
+            <h2 id='stats-third'>Total 491</h2> \
+            <div id='infographic-canvas-third'> \
+              <!-- place to plot the table --> \
+            </div> \
           </div> \
-        </div> <!-- /.col-md-4 -->")});
+        </div> <!-- /.col-md-4 -->";
+  btnSurvClass.click(function() {$("#infographic").html(survClassContent)});
   btnSurvClass.click(function() {plotPassengers(firstClass, 10, passengersIcon, 'infographic-canvas-first')});
   btnSurvClass.click(function() {plotPassengers(secondClass, 10, passengersIcon, 'infographic-canvas-second')});
   btnSurvClass.click(function() {plotPassengers(thirdClass, 10, passengersIcon, 'infographic-canvas-third')});
+  btnSurvClass.click(function() {$("#info-box-content").css("height", "400px")});
 
   // add actions to 'How many survived' button
   function survStats() {
