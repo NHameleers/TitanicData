@@ -1,5 +1,5 @@
 body {
-  background: url(../../images/titanic_bg.jpg) no-repeat center center fixed;
+  background: url(../../images/titanic_bg_jamasca66.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -16,16 +16,9 @@ button {
   width: 170px;
 }
 
-#button-how-many-surv {
-  margin: 10px auto;
-  width: 350px;
-}
-
 #infographic-canvas {
   margin-top: 10px;
 }
-
-
 
 .info-box-content {
   margin: 0px auto;
@@ -43,4 +36,12 @@ button {
 
 .color-perished {
   color: red;
+}
+
+footer {
+  text-align: right;
+}
+
+#cc-link {
+  color: white;
 }
