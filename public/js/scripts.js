@@ -6,12 +6,6 @@
 * Returns the tables of pictograms in the infographic
 */
 
-/* TO DO:
-1. % survived should only be visible after clicking survival button. Link it to that button.
-2. The survival button should color the infographic icons.
-3. Legend needs to be inputted, linked to the first 3 buttons.
-*/
-
 $(function(){ // run when document ready
 
   var passengers = 891;
