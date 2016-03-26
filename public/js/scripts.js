@@ -78,8 +78,8 @@ $(function(){ // run when document ready
   var survTotalContent = " \
         <div class='col-md-12 info-box'> \
           <div class='info-box-content'> \
-            <h1>Passengers</h1> \
-            <h2 id='stats-passengers'>Total: 891</h2> \
+            <p class='legend'><span class='fa fa-user fa-lg'></span> = 10</p><h1 class='box-title'>Passengers</h1> \
+            <h4 id='stats-passengers'>Total: 891</h4> \
             <div id='infographic-canvas'> \
             </div> \
           </div> \
@@ -92,8 +92,8 @@ $(function(){ // run when document ready
   var survSexContent = " \
         <div class='col-md-6 info-box'> \
           <div class='info-box-content'> \
-            <h1>Men</h1> \
-            <h2 id='stats-men'>Total: 577</h2> \
+            <p class='legend'><span class='fa fa-male fa-lg'></span> = 10</p><h1 class='box-title'>Men</h1> \
+            <h4 id='stats-men'>Total: 577</h4> \
             <div id='infographic-canvas-men'> \
               <!-- place to plot the table --> \
             </div> \
@@ -101,8 +101,8 @@ $(function(){ // run when document ready
         </div> \
         <div class='col-md-6 info-box'> \
           <div class='info-box-content'> \
-            <h1>Women</h1> \
-            <h2 id='stats-women'>Total: 314</h2> \
+            <p class='legend'><span class='fa fa-female fa-lg'></span> = 10</p><h1 class='box-title'>Women</h1> \
+            <h4 id='stats-women'>Total: 314</h4> \
             <div id='infographic-canvas-women'> \
               <!-- place to plot the table --> \
             </div> \
@@ -117,8 +117,8 @@ $(function(){ // run when document ready
   var survClassContent = " \
         <div class='col-md-4 info-box'> \
           <div class='info-box-content'<> \
-            <h1>1st Class</h1> \
-            <h2 id='stats-first'>Total 216</h2> \
+            <p class='legend'><span class='fa fa-user fa-lg'></span> = 10</p><h1 class='box-title'>1st Class</h1> \
+            <h4 id='stats-first'>Total 216</h4> \
             <div id='infographic-canvas-first'> \
               <!-- place to plot the table --> \
             </div> \
@@ -126,8 +126,8 @@ $(function(){ // run when document ready
         </div> \
         <div class='col-md-4 info-box'> \
           <div class='info-box-content'> \
-            <h1>2nd Class</h1> \
-            <h2 id='stats-second'>Total 184</h2> \
+            <p class='legend'><span class='fa fa-user fa-lg'></span> = 10</p><h1 class='box-title'>2nd Class</h1> \
+            <h4 id='stats-second'>Total 184</h4> \
             <div id='infographic-canvas-second'> \
               <!-- place to plot the table --> \
             </div> \
@@ -135,8 +135,8 @@ $(function(){ // run when document ready
         </div> \
         <div class='col-md-4 info-box'> \
           <div class='info-box-content'> \
-            <h1>3rd Class</h1> \
-            <h2 id='stats-third'>Total 491</h2> \
+            <p class='legend'><span class='fa fa-user fa-lg'></span> = 10</p><h1 class='box-title'>3rd Class</h1> \
+            <h4 id='stats-third'>Total 491</h4> \
             <div id='infographic-canvas-third'> \
               <!-- place to plot the table --> \
             </div> \

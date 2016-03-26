@@ -8,7 +8,7 @@ body {
 }
 
 #page-header {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.5);
 }
 
 button {
@@ -23,11 +23,24 @@ button {
 .info-box-content {
   margin: 0px auto;
   width: 400px;
-  height: 460px;
+  height: 480px;
   background-color: rgba(0,0,0,0.5);
   border: 30px;
   border-color: rgba(0,0,0,1);
   border-radius: 5px;
+}
+
+.legend {
+  display: inline-block;
+  margin-right: 50px;
+}
+
+.box-title {
+  display: inline-block;
+}
+
+span {
+  color: green;
 }
 
 .color-survived {
